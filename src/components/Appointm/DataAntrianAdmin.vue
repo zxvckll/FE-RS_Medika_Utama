@@ -1,9 +1,9 @@
 <script>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import ModalDataAntrian from "@/components/Appointment/ModalDataAntrian.vue";
-import DeleteModal from "../DeleteModal.vue";
-import axios from "axios";
+// import ModalDataAntrian from "@/components/Appointment/ModalDataAntrian.vue";
+// import DeleteModal from "../DeleteModal.vue";
+// import axios from "axios";
 
 import { mapGetters } from "vuex";
 
@@ -35,7 +35,7 @@ export default {
 
   methods: {
     async getListDoctor() {
-      var url = `http://localhost:5000/doctor/`;
+      var url = `${this.$url}/doctor/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -51,7 +51,7 @@ export default {
     },
 
     async getListPatient() {
-      var url = `http://localhost:5000/patient/`;
+      var url = `${this.$url}/patient/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -66,7 +66,7 @@ export default {
       }
     },
     async getListAppointment() {
-      var url = `http://localhost:5000/appointment/`;
+      var url = `${this.$url}/appointment/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -81,7 +81,7 @@ export default {
       }
     },
     async getListClinic() {
-      var url = `http://localhost:5000/clinic/`;
+      var url = `${this.$url}/clinic/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -96,7 +96,7 @@ export default {
       }
     },
     async getListStatus() {
-      var url = `http://localhost:5000/status/`;
+      var url = `${this.$url}/status/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -130,7 +130,7 @@ export default {
       console.log("delete data successfully");
     },
     async addData(Data) {
-      var url = `http://localhost:5000/appointment/`;
+      var url = `${this.$url}/appointment/`;
       delete Data.id;
       var config = {
         headers: {
@@ -146,7 +146,7 @@ export default {
       }
     },
     async editData(Data) {
-      var url = `http://localhost:5000/appointment/${Data.id}`;
+      var url = `${this.$url}/appointment/${Data.id}`;
       delete Data.id;
       var config = {
         headers: {

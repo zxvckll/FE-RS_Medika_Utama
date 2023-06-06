@@ -41,7 +41,7 @@ export default {
     },
 
     async getListPolyclinic() {
-      var url = `http://localhost:5000/polyclinic`;
+      var url = `${this.$url}/polyclinic`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -57,7 +57,7 @@ export default {
     },
 
     async getListUser() {
-      var url = `http://localhost:5000/user`;
+      var url = `${this.$url}/user`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -73,7 +73,7 @@ export default {
     },
 
     async getListClinic() {
-      var url = `http://localhost:5000/Clinic`;
+      var url = `${this.$url}/Clinic`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -89,7 +89,7 @@ export default {
     },
 
     async getListClinic() {
-      var url = `http://localhost:5000/Clinic`;
+      var url = `${this.$url}/Clinic`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,

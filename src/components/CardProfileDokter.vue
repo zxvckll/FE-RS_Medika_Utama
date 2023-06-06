@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     async getListScheduleByDoctor(id) {
-      var url = `http://localhost:5000/schedule/doctor/${this.data.id}`;
+      var url = `${this.$url}/schedule/doctor/${this.data.id}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,

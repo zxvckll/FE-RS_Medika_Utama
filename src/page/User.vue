@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getListUser() {
-      var url = `http://localhost:5000/user/`
+      var url = `${this.$url}/user/`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -36,7 +36,7 @@ export default {
       }
     },
     async deleteUserByID(id) {
-      var url = `http://localhost:5000/user/${id}`
+      var url = `${this.$url}/user/${id}`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -53,7 +53,7 @@ export default {
     },
     async addUser(newData) {
       delete newData.id
-      var url = "http://localhost:5000/user"
+      var url = `${this.$url}/user`
       var data = {
         email: newData.email,
       }
@@ -74,7 +74,7 @@ export default {
       }
     },
     async editUser(newData) {
-      var url = `http://localhost:5000/user/${newData.id}`
+      var url = `${this.$url}/user/${newData.id}`
       delete newData.id
       var data = { 
         email: newData.email,

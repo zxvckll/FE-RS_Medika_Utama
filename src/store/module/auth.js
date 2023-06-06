@@ -1,4 +1,6 @@
 import axios from "axios";
+import { inject } from 'vue';
+
 const state = () => ({
   userRole: "",
   userId: "",
@@ -18,9 +20,11 @@ const getters = {
 };
 
 const actions = {
-  async login({ commit }, payload) {
+  
+  async login({ commit }, {url,payload}) {
+    console.log(url);
     const response = await axios
-      .post("http://localhost:5000/login", payload)
+      .post(`${url}/login/`, payload)
       .catch((err) => {
         console.log(err);
       });

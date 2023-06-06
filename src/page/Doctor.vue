@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getListDoctor() {
-      var url = `http://localhost:5000/doctor/`
+      var url = `${this.$url}/doctor/`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -36,7 +36,7 @@ export default {
       }
     },
     async deleteDoctorByID(id) {
-      var url = `http://localhost:5000/doctor/${id}`
+      var url = `${this.$url}/doctor/${id}`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -53,7 +53,7 @@ export default {
     },
     async addDoctor(newData) {
       delete newData.id
-      var url = "http://localhost:5000/doctor"
+      var url = `${this.$url}/doctor`
       var data = {
         name: newData.name,
         imageUrl: newData.imageUrl,
@@ -81,7 +81,7 @@ export default {
       }
     },
     async editDoctor(newData) {
-      var url = `http://localhost:5000/doctor/${newData.id}`
+      var url = `${this.$url}/doctor/${newData.id}`
       delete newData.id
       var data = {
         

@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getListClinic() {
-      var url = `http://localhost:5000/clinic/`
+      var url = `${this.$url}/clinic/`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -36,7 +36,7 @@ export default {
       }
     },
     async deleteClinicByID(id) {
-      var url = `http://localhost:5000/clinic/${id}`
+      var url = `${this.$url}/clinic/${id}`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -53,7 +53,7 @@ export default {
     },
     async addClinic(newData) {
       delete newData.id
-      var url = "http://localhost:5000/clinic"
+      var url = `${this.$url}/clinic`
       var data = {
         name: newData.name,
         PolyclinicId: newData.PolyclinicId.id,
@@ -75,7 +75,7 @@ export default {
       }
     },
     async editClinic(newData) {
-      var url = `http://localhost:5000/clinic/${newData.id}`
+      var url = `${this.$url}/clinic/${newData.id}`
       delete newData.id
       var data = { 
         name: newData.name,

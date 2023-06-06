@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getListAdmin() {
-      var url = `http://localhost:5000/admin/`
+      var url = `${this.$url}/admin/`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -36,7 +36,7 @@ export default {
       }
     },
     async deleteAdminByID(id) {
-      var url = `http://localhost:5000/admin/${id}`
+      var url = `${this.$url}/admin/${id}`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -53,7 +53,7 @@ export default {
     },
     async addAdmin(newData) {
       delete newData.id
-      var url = "http://localhost:5000/admin"
+      var url = `${this.$url}/admin`
       var data = {
         name: newData.name,
         UserId: newData.UserId.id,
@@ -75,7 +75,7 @@ export default {
       }
     },
     async editAdmin(newData) {
-      var url = `http://localhost:5000/admin/${newData.id}`
+      var url = `${this.$url}/admin/${newData.id}`
       delete newData.id
       var data = {
         

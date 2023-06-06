@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     async getListDoctorByClinic() {
-      var url = `http://localhost:5000/doctor/clinic/${this.$route.params.id}`;
+      var url = `${this.$url}/doctor/clinic/${this.$route.params.id}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,

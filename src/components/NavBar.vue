@@ -50,7 +50,7 @@ export default {
       alert("logout sucess");
     },
     async getListPolyclinic() {
-      var url = `http://localhost:5000/polyclinic/`;
+      var url = `${this.$url}/polyclinic/`;
       try {
         const response = await axios.get(url);
         this.polyclinics = await response.data;

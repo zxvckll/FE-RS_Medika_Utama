@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getListDay() {
-      var url = `http://localhost:5000/day/`
+      var url = `${this.$url}/day/`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -36,7 +36,7 @@ export default {
       }
     },
     async deleteDayByID(id) {
-      var url = `http://localhost:5000/day/${id}`
+      var url = `${this.$url}/day/${id}`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -53,7 +53,7 @@ export default {
     },
     async addDay(newData) {
       delete newData.id
-      var url = "http://localhost:5000/day"
+      var url = `${this.$url}/day`
       var data = {
         name: newData.name,
       }
@@ -74,7 +74,7 @@ export default {
       }
     },
     async editDay(newData) {
-      var url = `http://localhost:5000/day/${newData.id}`
+      var url = `${this.$url}/day/${newData.id}`
       delete newData.id
       var data = { 
         name: newData.name,

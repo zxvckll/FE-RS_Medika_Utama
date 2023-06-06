@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getListStatus() {
-      var url = `http://localhost:5000/status/`
+      var url = `${this.$url}/status/`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -36,7 +36,7 @@ export default {
       }
     },
     async deleteStatusByID(id) {
-      var url = `http://localhost:5000/status/${id}`
+      var url = `${this.$url}/status/${id}`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -53,7 +53,7 @@ export default {
     },
     async addStatus(newData) {
       delete newData.id
-      var url = "http://localhost:5000/status"
+      var url = `${this.$url}/status`
       var data = {
         name: newData.name,
       }
@@ -74,7 +74,7 @@ export default {
       }
     },
     async editStatus(newData) {
-      var url = `http://localhost:5000/status/${newData.id}`
+      var url = `${this.$url}/status/${newData.id}`
       delete newData.id
       var data = { 
         name: newData.name,

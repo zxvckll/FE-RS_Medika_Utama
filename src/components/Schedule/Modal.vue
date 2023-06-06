@@ -25,7 +25,7 @@ export default {
 
   methods: {
     async getListDoctor() {
-      var url = `http://localhost:5000/doctor`;
+      var url = `${this.$url}/doctor`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -41,7 +41,7 @@ export default {
     },
 
     async getListDay() {
-      var url = `http://localhost:5000/day`;
+      var url = `${this.$url}/day`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,

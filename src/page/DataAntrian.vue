@@ -27,7 +27,7 @@ export default {
   },
   methods : {
     async getListAppointment() {
-      var url = `http://localhost:5000/appointment/`
+      var url = `${this.$url}/appointment/`
       try {
         const response = await axios.get(url);
         const data = await response;

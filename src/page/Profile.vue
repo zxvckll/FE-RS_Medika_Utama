@@ -32,7 +32,7 @@ export default {
     },
 
     async editAdmin(newData) {
-      var url = `http://localhost:5000/admin/${newData.id}`
+      var url = `${this.$url}/admin/${newData.id}`
       delete newData.id
       var data = {
         
@@ -55,7 +55,7 @@ export default {
       }
     },
     async editDoctor(newData) {
-      var url = `http://localhost:5000/doctor/${newData.id}`
+      var url = `${this.$url}/doctor/${newData.id}`
       delete newData.id
       var data = {
         
@@ -83,7 +83,7 @@ export default {
     },
 
     async editPatient(newData) {
-      var url = `http://localhost:5000/patient/${newData.id}`
+      var url = `${this.$url}/patient/${newData.id}`
       delete newData.id
       var data = {
         name: newData.name,
@@ -123,7 +123,7 @@ export default {
       }
     },
     async getListPatientByUserId(getUserId) {
-      var url = `http://localhost:5000/patient/user/${getUserId}`;
+      var url = `${this.$url}/patient/user/${getUserId}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -139,7 +139,7 @@ export default {
     },
 
     async getListAdminByUserId(getUserId) {
-      var url = `http://localhost:5000/admin/user/${getUserId}`;
+      var url = `${this.$url}/admin/user/${getUserId}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -155,7 +155,7 @@ export default {
     },
 
     async getListDoctorByUserId(getUserId) {
-      var url = `http://localhost:5000/doctor/user/${getUserId}`;
+      var url = `${this.$url}/doctor/user/${getUserId}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,

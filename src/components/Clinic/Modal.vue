@@ -23,7 +23,7 @@ export default {
 
   methods: {
     async getListPolyclinic() {
-      var url = `http://localhost:5000/polyclinic`;
+      var url = `${this.$url}/polyclinic`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,

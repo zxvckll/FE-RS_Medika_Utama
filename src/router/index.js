@@ -1,16 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 import store from "@/store/index.js";
 
-
-const Doctor = () => import("@/page/Doctor.vue");                
-const Admin = () => import("@/page/Admin.vue");                
-const Polyclinic = () => import("@/page/Polyclinic.vue");                
-const Schedule = () => import("@/page/Schedule.vue");                
-const Day = () => import("@/page/Day.vue");                
-const Status = () => import("@/page/Status.vue");                
-const User = () => import("@/page/User.vue");                
-const Clinic = () => import("@/page/Clinic.vue");                
-const Patient = () => import("@/page/Patient.vue");                
+const Doctor = () => import("@/page/Doctor.vue");
+const Admin = () => import("@/page/Admin.vue");
+const Polyclinic = () => import("@/page/Polyclinic.vue");
+const Schedule = () => import("@/page/Schedule.vue");
+const Day = () => import("@/page/Day.vue");
+const Status = () => import("@/page/Status.vue");
+const User = () => import("@/page/User.vue");
+const Clinic = () => import("@/page/Clinic.vue");
+const Patient = () => import("@/page/Patient.vue");
 const DataAntrian = () => import("@/page/DataAntrian.vue");
 const Login = () => import("@/page/Login.vue");
 const Signup = () => import("@/page/Signup.vue");
@@ -19,7 +18,7 @@ const Profile = () => import("@/page/Profile.vue");
 const JadwalPraktek = () => import("@/page/JadwalPraktek.vue");
 const Appointment = () => import("@/page/Appointment.vue");
 
-const CardProfileDokter = () => import("@/page/CardProfileDokter.vue");
+// const CardProfileDokter = () => import("@/page/CardProfileDokter.vue");
 // const Doctor = () => import("@/page/Doctor.vue");
 
 // const Sidebar = () => import('@/page/Sidebar.vue');
@@ -32,7 +31,7 @@ const CardProfileDokter = () => import("@/page/CardProfileDokter.vue");
 
 const routes = [
   { path: "/DataAntrian", name: "DataAntrian", component: DataAntrian },
-{ path: "/Login", name: "Login", component: Login },
+  { path: "/Login", name: "Login", component: Login },
   { path: "/Signup", name: "Signup", component: Signup },
   { path: "/Profile", name: "Profile", component: Profile },
   { path: "/Doctor", name: "Doctor", component: Doctor },

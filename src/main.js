@@ -6,7 +6,9 @@ import store from "./store/index.js";
 import VueMultiselect from 'vue-multiselect'
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
+import GlobalVariablePlugin from "./GlobalVariablePlugin";
+
+const app = createApp(App);
 
 
-
-createApp(App).use(store).use(router).component('VueDatePicker', VueDatePicker).component('multiselect', VueMultiselect).mount("#app");
+app.use(store).use(router).use(GlobalVariablePlugin).component('VueDatePicker', VueDatePicker).component('multiselect', VueMultiselect).mount("#app");

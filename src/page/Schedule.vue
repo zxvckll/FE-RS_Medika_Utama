@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getListSchedule() {
-      var url = `http://localhost:5000/schedule/`
+      var url = `${this.$url}/schedule/`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -36,7 +36,7 @@ export default {
       }
     },
     async deleteScheduleByID(id) {
-      var url = `http://localhost:5000/schedule/${id}`
+      var url = `${this.$url}/schedule/${id}`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -53,7 +53,7 @@ export default {
     },
     async addSchedule(newData) {
       delete newData.id
-      var url = "http://localhost:5000/schedule"
+      var url = `${this.$url}/schedule`
       var data = {
         time: newData.time,
         DoctorId: newData.DoctorId.id,
@@ -77,7 +77,7 @@ export default {
       }
     },
     async editSchedule(newData) {
-      var url = `http://localhost:5000/schedule/${newData.id}`
+      var url = `${this.$url}/schedule/${newData.id}`
       delete newData.id
       var data = { 
         time: newData.time,

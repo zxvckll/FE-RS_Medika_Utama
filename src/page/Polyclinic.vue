@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getListPolyclinic() {
-      var url = `http://localhost:5000/polyclinic/`
+      var url = `${this.$url}/polyclinic/`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -36,7 +36,7 @@ export default {
       }
     },
     async deletePolyclinicByID(id) {
-      var url = `http://localhost:5000/polyclinic/${id}`
+      var url = `${this.$url}/polyclinic/${id}`
       var config = {
         headers: {
           'Authorization' : `Bearer ${this.getAccessToken}`
@@ -53,7 +53,7 @@ export default {
     },
     async addPolyclinic(newData) {
       delete newData.id
-      var url = "http://localhost:5000/polyclinic"
+      var url = `${this.$url}/polyclinic`
       var data = {
         name: newData.name,
       }
@@ -74,7 +74,7 @@ export default {
       }
     },
     async editPolyclinic(newData) {
-      var url = `http://localhost:5000/polyclinic/${newData.id}`
+      var url = `${this.$url}/polyclinic/${newData.id}`
       delete newData.id
       var data = { 
         name: newData.name,

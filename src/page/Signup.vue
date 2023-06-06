@@ -25,7 +25,7 @@ export default {
     },
     async Signup(newData) {
       delete newData.id;
-      var url = "http://localhost:5000/user";
+      var url = `${this.$url}/user`;
       var data = {
         email: newData.email,
         password: newData.password,
@@ -48,7 +48,7 @@ export default {
     },
     async addPatient(newData) {
       delete newData.id;
-      var url = "http://localhost:5000/patient";
+      var url = `${this.$url}/patient`;
       
       var data = {
         UserId: this.userId,

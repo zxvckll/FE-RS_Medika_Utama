@@ -37,7 +37,7 @@ export default {
 
   methods: {
     async getListPolyclinic() {
-      var url = `http://localhost:5000/polyclinic`;
+      var url = `${this.$url}/polyclinic`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -52,7 +52,7 @@ export default {
     },
     
     async getListSchedule() {
-      var url = `http://localhost:5000/schedule`;
+      var url = `${this.$url}/schedule`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -66,7 +66,7 @@ export default {
       }
     },
     async getListDoctor() {
-      var url = `http://localhost:5000/doctor/`;
+      var url = `${this.$url}/doctor/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -82,7 +82,7 @@ export default {
 
 
     async getListClinic() {
-      var url = `http://localhost:5000/clinic/`;
+      var url = `${this.$url}/clinic/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -96,7 +96,7 @@ export default {
       }
     },
     async getListStatus() {
-      var url = `http://localhost:5000/status/`;
+      var url = `${this.$url}/status/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -110,7 +110,7 @@ export default {
       }
     },
     async getListPatient() {
-      var url = `http://localhost:5000/patient/`;
+      var url = `${this.$url}/patient/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -124,7 +124,7 @@ export default {
       }
     },
     async getListAppointment() {
-      var url = `http://localhost:5000/appointment/`;
+      var url = `${this.$url}/appointment/`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -140,7 +140,7 @@ export default {
     },
 
     async getListAppointmentByDoctor(getUserId) {
-      var url = `http://localhost:5000/appointment/doctor/${getUserId}`;
+      var url = `${this.$url}/appointment/doctor/${getUserId}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -157,7 +157,7 @@ export default {
     },
 
     async getListAppointmentByPatient(getUserId) {
-      var url = `http://localhost:5000/appointment/patient/${getUserId}`;
+      var url = `${this.$url}/appointment/patient/${getUserId}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -173,7 +173,7 @@ export default {
       }
     },
     async deleteAppointmentByID(id) {
-      var url = `http://localhost:5000/appointment/${id}`;
+      var url = `${this.$url}/appointment/${id}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
@@ -190,7 +190,7 @@ export default {
     },
     async addAppointment(newData) {
       delete newData.id;
-      var url = "http://localhost:5000/appointment";
+      var url = `${this.$url}/appointment`;
       var data = {
         date: newData.date,
         waitingEstimation: newData.waitingEstimation,
@@ -218,7 +218,7 @@ export default {
     },
     async editAppointment(newData) {
       console.log(newData);
-      var url = `http://localhost:5000/appointment/${newData.id}`;
+      var url = `${this.$url}/appointment/${newData.id}`;
       delete newData.id;
       var data = {
         date: newData.date,

@@ -43,7 +43,7 @@ export default {
       // console.log(this.time_);
     },
     async getListScheduleByDoctor(id) {
-      var url = `http://localhost:5000/schedule/doctor/${id}`;
+      var url = `${this.$url}/schedule/doctor/${id}`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,

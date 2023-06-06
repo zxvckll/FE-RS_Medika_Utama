@@ -28,7 +28,7 @@ export default {
 
 
     async getListUser() {
-      var url = `http://localhost:5000/user`;
+      var url = `${this.$url}/user`;
       var config = {
         headers: {
           Authorization: `Bearer ${this.getAccessToken}`,
